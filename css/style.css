@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/* [v-cloak] 読み込み中のチラつき防止 */
+[v-cloak] {
+    display: none;
+}
+
+/* 検索窓のクリアボタン (×) のスタイリング */
+.btn-clear {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    z-index: 5;
+}
+
+.btn-clear:hover {
+    color: #333 !important;
+}
+
+/* セミナーカードホバー時のちょっとした演出 */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+}
+
+/* 「もっと見る」で追加される際のフェードインアニメーション */
+.fade-enter-active {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* transition-group 用の配置維持設定 */
+.fade-move {
+    transition: transform 0.6s ease;
+}
+
+
+/* 以下seminar.htmlのスタイル */
+.container{
+    max-width:900px;
+    margin:0 auto;
+    background:#fff;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    overflow:hidden;
+}
+
+.header{
+    background:#005bac;
+    color:#fff;
+    padding:20px;
+}
+
+.content{
+    padding:30px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    border-bottom:1px solid #ddd;
+    padding:16px;
+    text-align:left;
+    vertical-align:top;
+}
+
+th{
+    width:180px;
+    background:#fafafa;
+    font-weight:bold;
+}
+
+.detail{
+    white-space:pre-wrap;
+    line-height:1.8;
+}
+
+.button-area{
+    text-align:center;
+    margin-top:40px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 0.95em;
+    
+}
+
+.form-group 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 80%;
+    padding: 10px;
+    margin-left: 10%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+textarea {
+    resize: vertical;
+}
+
+.submit-btn{
+    display:inline-block;
+    background:#e60012;
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    padding:18px 50px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    background:#c4000f;
+}
+
+/* エラーメッセージ用スタイル */
+.error-text {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: block;
+}
+.is-invalid {
+    border-color: #dc3545 !important;
+    background-color: #fdf2f2;
+}
