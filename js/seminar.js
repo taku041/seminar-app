@@ -181,7 +181,7 @@ new Vue({
         selectedEvent: null, // クリックされたseminar-card
         isModalOpen: false,  // 🚀 親のdataにも定義を追加！
         seminarList: [],     // 全セミナーデータ
-        visibleCount: 18,    // 現在の表示件数（初期値21）
+        visibleCount: 18,    // 現在の表示件数（初期値18）
     },
 
 
