@@ -21,8 +21,7 @@
         </div>
 
         <div class="content" v-if="selectedEvent">
-            <form @submit.prevent="submitApplication">
-                
+            <form @submit.prevent="submitApplication" action="https://ssgform.com/s/KsWXdwecU96W">                
                 <table>
                     <tr>
                         <th>セミナータイトル</th>
@@ -31,17 +30,14 @@
                             <span class="badge bg-secondary">{{ selectedEvent.category }}</span>
                         </td>
                     </tr>
-
                     <tr>
                         <th>開催日</th>
                         <td>{{ formattedDate }}</td>
                     </tr>
-
                     <tr>
                         <th>場所</th>
                         <td>📍 {{ selectedEvent.location1 }}</td>
                     </tr>
-
                     <tr>
                         <th>セミナー詳細</th>
                         <td style="white-space: pre-wrap; line-height: 1.6; font-size: 0.95rem;">{{ selectedEvent.description }}</td>
@@ -49,29 +45,24 @@
                 </table>
 
                 <div class="bg-light p-4 rounded-3 border mb-4">
-                    <h2 style="margin-left: 50%; transform: translateX(-25%);" class="h5 fw-bold mb-4 border-bottom pb-2">お申込者様情報の入力</h3>
-
+                    <h2 style="margin-left: 50%; transform: translateX(-25%);" class="h5 fw-bold mb-4 border-bottom pb-2">お申込者様情報の入力</h2>
                     <div class="form-group">
                         <label for="name" class="required">氏名</label>
                         <input type="text" id="name" v-model="formData.name" placeholder="山田 太郎" required>
                     </div>
-
                     <div class="form-group">
                         <label for="email" class="required">メールアドレス</label>
                         <input type="email" id="email" v-model="formData.email" placeholder="example@email.com" required>
                     </div>
-
                     <div class="form-group">
                         <label for="email_confirm" class="required">メールアドレス(確認用)</label>
                         <input type="email" id="email_confirm" v-model="formData.emailConfirm" :class="{'is-invalid': hasEmailError}" placeholder="example@email.com" required>
                         <br><span class="error-text" style="margin-left: 10%;" v-if="hasEmailError">※メールアドレスが一致しません。</span>
                     </div>
-
                     <div class="form-group">
                         <label for="tel" class="required">電話番号</label>
                         <input type="tel" id="tel" v-model="formData.tel" placeholder="090-1234-5678" required>
                     </div>
-
                     <div class="form-group">
                         <label for="remarks">備考欄</label>
                         <textarea id="remarks" v-model="formData.remarks" rows="5" placeholder="ご質問や事前に伝えておきたいことなどがあればお書きください。"></textarea>
